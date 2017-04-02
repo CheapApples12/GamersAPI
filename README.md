@@ -1,4 +1,4 @@
-[![GamersAPI Logo][logo]](https://github.com/CheapApples12/GamersAPI)
+[![GamersAPI Logo][logo]](https://cheapapples12.github.io/GamersAPI/)
 
 
 ## Using the APIs
