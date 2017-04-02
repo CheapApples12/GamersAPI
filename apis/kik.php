@@ -13,8 +13,14 @@
     
     $kik_i = get_kik($r);
     
+    if ($kik_i == "") {
+        http_response_code(406);
+        header("Content-type: text/json");
+        die('{"error":"request is malformed: account does not exist"}');
+    }
+    
     header("Content-type: text/json");
-    echo '{"username":"' . $r . '", "display_name":"' . clear($kik_r_b [0]) . '", "avatar":"' . $kik_i . '"}';
+    echo '{"username":"' . $r . '", "display_name":"' . clear($kik_r_b [0]) . '", "avatar":"' . $kik_i . '", "avatar_ssl":"https://gamersapi.herokuapp.com/apis/kik_ssl.php?username=' . $r . '"}';
         
     function get_kik($username) {
         $html = file_get_contents_curl("https://kik.me/" . $username);
