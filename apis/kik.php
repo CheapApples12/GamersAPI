@@ -8,13 +8,13 @@
     }
     
     $kik_r = file_get_contents(unm("https://kik.me/" . $r));
-    $kik_r = explode('<h1 class="display-name">', $kik_r);
-    $kik_r = explode("</h1>" , $kik_r[1]);
+    $kik_r_a = explode('<h1 class="display-name">', $kik_r);
+    $kik_r_b = explode("</h1>" , $kik_r_a[1]);
     
     $kik_i = get_kik($r);
     
     header("Content-type: text/json");
-    echo '{"username":"' . $r . '", "display_name":"' . $kik_r[0] . '", "avatar":"' . $kik_i . '"}';
+    echo '{"username":"' . $r . '", "display_name":"' . clear($kik_r_b [0]) . '", "avatar":"' . $kik_i . '"}';
         
     function get_kik($username) {
         $html = file_get_contents_curl("https://kik.me/" . $username);
