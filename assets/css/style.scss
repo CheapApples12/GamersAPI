@@ -1,1 +1,22 @@
 @import "{{ site.theme }}";
+
+.page-header {
+    background-image: url(https://raw.githubusercontent.com/CheapApples12/GamersAPI/master/assets/images/header.png);
+    background-size: cover;
+    background-position: center center;
+    min-height: 350px;
+}
+
+.page-header>* {
+    color: rgba(255, 255, 255, 0);
+    cursor: default;
+    background-color: rgba(255, 255, 255, 0);
+    border: rgba(255, 255, 255, 0);
+    position: absolute;
+    top: -999px;
+    left: -999px;
+}
+
+.main-content>p>a>img {
+    display: none;
+}
