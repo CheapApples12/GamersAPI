@@ -66,4 +66,8 @@ GamersAPI does not need composer, or any third-party software. The only requirem
 
 If you do not want to download the api's, you are welcome to use our [Heroku hosted API's](#using-the-apis).
 
+
+## Additional APIs
+If you have a project that requires information from a website or application that does not have an API, feel free to make a request, and I'll be sure to have a crack at it. Any API's I develop that can be considered game-related will be added here. If you want to suggest an API, [open a new issue](https://github.com/CheapApples12/GamersAPI/issues/new).
+
 [logo]: https://raw.githubusercontent.com/CheapApples12/GamersAPI/master/assets/images/header.png "GamersAPI Logo"
