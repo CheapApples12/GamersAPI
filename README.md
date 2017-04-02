@@ -8,7 +8,7 @@
 ## Using the APIs
 This section contains the API's, example uses, example responses and response content-type.
 
-### KiK API
+#### KiK API
 KiK Messenger does not offer a user information API. We rely solely on people doing the right thing, and not abusing the API. KiK is a popular choice of messaging app for gaming communities; it's a fast, secure, convenient messenger, and it's all-round pretty awesome.
 
 Our API allows you to get a user's display name, KiK avatar and a secure (https) version of the user's KiK avatar.
@@ -27,6 +27,33 @@ Example Response:
 ```json
 {"username":"cheapapples12", "display_name":"CheapApples12 [Vice President]", "avatar":"http://profilepics.kik.com/Fh8jwxDfbzVwNOSFTN67fDmPGn4/orig.jpg", "avatar_ssl":"https://gamersapi.herokuapp.com/apis/kik_https.php?username=cheapapples12"}
 ```
+
+#### Rockstar Games Socialclub Crew API
+Rockstar Games does not offer any way whatsoever to retrieve any information about any crew on the socialclub. We developed the Rockstar Games Socialclub Crew API so that crews can retrieve crew names and hopefully one day, crew avatar images from a Socialclub Crew URL.
+
+We ask that you also use this API modestly, as we rely on a good community relationship with Rockstar Games in order to make this API work.
+
+At the moment, our API allows you to retrieve a crew name from a Socialclub URL.
+
+The API can be accessed via:
+```
+https://gamersapi.herokuapp.com/apis/rsg.php?url={full socialclub url}
+```
+
+Example Use:
+```
+https://gamersapi.herokuapp.com/apis/rsg.php?url=https://socialclub.rockstargames.com/crew/los_santos_police_xb
+```
+
+Example Response:
+```json
+{"crew_name":"Los Santos Police XB"}
+```
+
+
+
+
+
 
 
 ## Downloading the APIs
