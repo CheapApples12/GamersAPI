@@ -1,3 +1,4 @@
 <?php
-    echo "Refer to Documentation: https://github.com/CheapApples12/GamersAPI";
+    header("Location: https://cheapapples12.github.io/GamersAPI/");
+    die();
 ?>
