@@ -1,5 +1,5 @@
 ![GamersAPI][logo]
-[logo]: https://github.com/CheapApples12/GamersAPI/raw/master/github_assets/header.png
+[logo]: https://github.com/CheapApples12/GamersAPI/raw/master/github_assets/header.png "GamersAPI Logo"
 
 
 ## Using the APIs
