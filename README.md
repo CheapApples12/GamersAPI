@@ -1,5 +1,4 @@
 ![GamersAPI Logo][logo]
-[logo]: https://github.com/CheapApples12/GamersAPI/raw/master/github_assets/header.png "GamersAPI Logo"
 
 
 ## Using the APIs
@@ -62,3 +61,5 @@ GamersAPI does not need composer, or any third-party software. The only requirem
  - allow_url_fopen allowed
 
 If you do not want to download the api's, you are welcome to use our [Heroku hosted API's](#using-the-apis).
+
+[logo]: https://github.com/CheapApples12/GamersAPI/raw/master/github_assets/header.png "GamersAPI Logo"
