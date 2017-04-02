@@ -7,7 +7,7 @@
         die('{"error":"request is malformed: username not provided"}');
     }
     
-    $kik_r = file_get_contents(unm("https://kik.me/" . $r));
+    $kik_r = file_get_contents("https://kik.me/" . unm($r));
     $kik_r_a = explode('<h1 class="display-name">', $kik_r);
     $kik_r_b = explode("</h1>" , $kik_r_a[1]);
     
