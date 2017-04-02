@@ -28,6 +28,8 @@ Example Response:
 {"username":"cheapapples12", "display_name":"CheapApples12 [Vice President]", "avatar":"http://profilepics.kik.com/Fh8jwxDfbzVwNOSFTN67fDmPGn4/orig.jpg", "avatar_ssl":"https://gamersapi.herokuapp.com/apis/kik_https.php?username=cheapapples12"}
 ```
 
+---
+
 #### Rockstar Games Socialclub Crew API
 Rockstar Games does not offer any way whatsoever to retrieve any information about any crew on the socialclub. We developed the Rockstar Games Socialclub Crew API so that crews can retrieve crew names and hopefully one day, crew avatar images from a Socialclub Crew URL.
 
