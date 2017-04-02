@@ -14,7 +14,7 @@
     $kik_i = get_kik($r);
     
     header("Content-type: text/json");
-    echo '{"username":"' . $r . '", "display_name":"' . $kik_r . '", "avatar":"' . $kik_i . '"}';
+    echo '{"username":"' . $r . '", "display_name":"' . $kik_r[0] . '", "avatar":"' . $kik_i . '"}';
         
     function get_kik($username) {
         $html = file_get_contents_curl("https://kik.me/" . $username);
