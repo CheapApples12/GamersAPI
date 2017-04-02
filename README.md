@@ -1,14 +1,11 @@
 ![header.png](https://github.com/CheapApples12/GamersAPI/raw/master/github_assets/header.png)
 
 
-## Includes APIs
-
-
-
 ## Using the APIs
 This section contains the API's, example uses and example responses. All response content-type's are JSON. Here are the API's we currently offer:
 
 [KiK Messenger API](#kik-api)
+
 [Rockstar Games Socialclub API](#rockstar-games-socialclub-crew-api)
 
 #### KiK API
