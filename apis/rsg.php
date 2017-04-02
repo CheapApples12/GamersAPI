@@ -23,7 +23,7 @@
         die('{"error":"request is malformed: url not provided"}');
     }
     
-    if (strpos($r,'socialclub.rockstargames.com/crew') !== false) {
+    if (strpos($r,'socialclub.rockstargames.com/crew') === false) {
         http_response_code(406);
         header("Content-type: text/json");
         die('{"error":"request is malformed: url not correct"}');
