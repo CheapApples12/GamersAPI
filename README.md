@@ -4,7 +4,17 @@
 ## Includes APIs
 
 
+
 ## Using the APIs
+This section contains the API's, example uses, example responses and response content-type.
+
+### KiK API
+KiK Messenger does not offer a user information API. We rely solely on people doing the right thing, and not abusing the API. KiK is a popular choice of messaging app for gaming communities; it's a fast, secure, convenient messenger, and it's all-round pretty awesome.
+
+Our API allows you to get a user's display name, KiK avatar and a secure (https) version of the user's KiK avatar.
+
+The API can be accessed via:
+
 
 
 ## Downloading the APIs
