@@ -1,4 +1,5 @@
-![header.png](https://github.com/CheapApples12/GamersAPI/raw/master/github_assets/header.png)
+![GamersAPI Header][logo]
+[logo]:https://github.com/CheapApples12/GamersAPI/raw/master/github_assets/header.png
 
 
 ## Using the APIs
