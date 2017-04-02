@@ -14,12 +14,12 @@ KiK Messenger does not offer a user information API. We rely solely on people do
 Our API allows you to get a user's display name, KiK avatar and a secure (https) version of the user's KiK avatar.
 
 The API can be accessed via:
-```http
+```
 https://gamersapi.herokuapp.com/apis/kik.php?username={kik username}
 ```
 
 Example Use:
-```http
+```
 https://gamersapi.herokuapp.com/apis/kik.php?username=cheapapples12
 ```
 
