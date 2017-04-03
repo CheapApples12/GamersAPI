@@ -76,8 +76,10 @@
 }
 
 .page-header-image {
-    position: relative!important;
+    position: relative;
     max-height: 350px;
-    top: initial!important;
-    left: initial!important;
+    top: initial;
+    left: initial;
+    width: 100%;
+    max-width: 1240px;
 }
