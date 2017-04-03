@@ -17,6 +17,12 @@
     position: absolute;
     top: -999px;
     left: -999px;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .main-content>p>a>img {
