@@ -46,9 +46,11 @@
     if ($i == "" || $r == "NO_NAME_GENERIC") {
         if (isset($_REQUEST["cache"])) {
             if ($_REQUEST["cache"] == "1") {
+                $lm = get_headers($i, 3);
                 session_cache_limiter("none");
                 header("Cache-control: max-age=" . strtotime("+2 days", time()));
-                header("Expires: " . strtotime("+2 days", time()));
+                header("Expires: " . gmdate("M d Y H:i:s", strtotime("+2 days", time())));
+                header("Last-modified: " . $lm[3]);
             } else {
                 header("Expires: 0");
                 header("Pragma: no-cache");
@@ -65,9 +67,11 @@
     } else {
         if (isset($_REQUEST["cache"])) {
             if ($_REQUEST["cache"] == "1") {
+                $lm = get_headers($i, 3);
                 session_cache_limiter("none");
                 header("Cache-control: max-age=" . strtotime("+2 days", time()));
-                header("Expires: " . strtotime("+2 days", time()));
+                header("Expires: " . gmdate("M d Y H:i:s", strtotime("+2 days", time())));
+                header("Last-modified: " . $lm[3]);
             } else {
                 header("Expires: 0");
                 header("Pragma: no-cache");
