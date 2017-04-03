@@ -29,7 +29,7 @@ https://gamersapi.herokuapp.com/apis/kik/cheapapples12
 
 Example Response:
 ```json
-{"username":"cheapapples12", "display_name":"CheapApples12 [VP]", "avatar":"http://profilepics.kik.com/Fh8jwxDfbzVwNOSFTN67fDmPGn4/orig.jpg", "avatar_ssl":"https://gamersapi.herokuapp.com/apis/kik_https/cheapapples12"}
+{"username":"cheapapples12", "display_name":"CheapApples12 [Vice President]", "avatar":"http://profilepics.cf.kik.com/Fh8jwxDfbzVwNOSFTN67fDmPGn4/orig.jpg", "avatar_ssl":"https://gamersapi.herokuapp.com/apis/kik_https/cheapapples12?cache=1"}
 ```
 
 ---
