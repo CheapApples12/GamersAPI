@@ -7,7 +7,6 @@
     background-image: initial!important;
     background-size: cover;
     background-position: center center;
-    min-height: 350px;
 }
 
 .page-header>* {
@@ -76,9 +75,9 @@
     z-index: 2;
 }
 
-.page-header>.page-header-image {
-    position: relative;
+.page-header-image {
+    position: relative!important;
     max-height: 350px;
-    top: initial;
-    left: initial;
+    top: initial!important;
+    left: initial!important;
 }
