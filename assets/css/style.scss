@@ -64,3 +64,21 @@
     background-color: rgba(255, 255, 255, 0)!important;
     background-repeat: no-repeat;
 }
+
+.page-header {
+    z-index: 15;
+    position: relative;
+    padding: 0!important;
+    margin-bottom: -7px;
+}
+
+.page-header-left, .page-header-right {
+    z-index: 2;
+}
+
+.page-header>.page-header-image {
+    position: relative;
+    max-height: 350px;
+    top: initial;
+    left: initial;
+}
