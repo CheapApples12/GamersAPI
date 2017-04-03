@@ -47,10 +47,18 @@
         die('{"error":"request is malformed: url not correct"}');
     }
     
-    if (substr($r, 0, 7) === "http://") {
-        $r_split = str_replace("http://socialclub.rockstargames.com/crew/", "", $r);
-    } else if (substr($r, 0, 8) === "https://") {
-        $r_split = str_replace("https://socialclub.rockstargames.com/crew/", "", $r);
+    if (substr($r, 0, 6) === "http:/" || substr($r, 0, 7) === "http://") {
+        if (substr($r, 0, 6) === "http:/") {
+            $r_split = str_replace("http:/socialclub.rockstargames.com/crew/", "", $r);
+        } else {
+            $r_split = str_replace("http://socialclub.rockstargames.com/crew/", "", $r);
+        }
+    } else if (substr($r, 0, 7) === "https:/" || substr($r, 0, 8) === "https://") {
+        if (substr($r, 0, 7) === "https:/") {
+            $r_split = str_replace("https:/socialclub.rockstargames.com/crew/", "", $r);
+        } else {
+            $r_split = str_replace("https://socialclub.rockstargames.com/crew/", "", $r);
+        }
     } else {
         $r_split = str_replace("socialclub.rockstargames.com/crew/", "", $r);
     }
