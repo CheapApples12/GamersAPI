@@ -4,7 +4,7 @@
 @import "{{ site.theme }}";
 
 .page-header {
-    background-image: url(https://raw.githubusercontent.com/CheapApples12/GamersAPI/master/assets/images/header.png);
+    background-image: initial!important;
     background-size: cover;
     background-position: center center;
     min-height: 350px;
@@ -38,4 +38,29 @@
 .content_sep>a {
     margin-bottom: 0;
     margin-top: 0;
+}
+
+.page-header-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 350px;
+    width: 50%;
+    background-color: rgb(4, 18, 41);
+}
+
+.page-header-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 350px;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+.page-header {
+    position: relative;
+    background-size: contain;
+    background-color: rgba(255, 255, 255, 0)!important;
+    background-repeat: no-repeat;
 }
