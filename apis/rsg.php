@@ -25,6 +25,40 @@
     //  Downloaded from: https://github.com/CheapApples12/GamersAPI
     //----------------------------------------------------------------------------------//
     
+    $r = urldecode($_REQUEST["url"]);
+    
+    if ($r == "") {
+        http_response_code(406);
+        header("Content-type: text/json");
+        die('{"error":"request is malformed: url not provided"}');
+    }
+    
+    if (strpos($r,'socialclub.rockstargames.com/crew') === false) {
+        http_response_code(406);
+        header("Content-type: text/json");
+        die('{"error":"request is malformed: url not correct"}');
+    }
+    
+    if (substr($r, 0, 7) === "http://")) {
+        $r_split = str_replace("http://socialclub.rockstargames.com/crew/", "", $r);
+    } else if (substr($r, 0, 8) === "https://")) {
+        $r_split = str_replace("https://socialclub.rockstargames.com/crew/", "", $r);
+    } else {
+        $r_split = str_replace("socialclub.rockstargames.com/crew/", "", $r);
+    }
+    
+    $r_newstring = "https://socialclub.rockstargames.com/crew/" . clear($r_split);
+    
+    $url = str_replace("Rockstar Games Social Club - Crew : ", "", _title($r_newstring));
+    if ($url == "" || $url == "Rockstar Games Social Club") {
+        http_response_code(444);
+        header("Content-type: text/json");
+        die('{"error":"crew does not exist"}');
+    } else {
+        header("Content-type: text/json");
+        echo '{"crew_name":"' . $url . '"}';
+    }
+    
     function _title($url) {
         $str = file_get_contents($url);
         if(strlen($str)>0){
@@ -41,27 +75,11 @@
         return $data;
     }
     
-    $r = clear(urldecode($_REQUEST["url"]));
-    
-    if ($r == "") {
-        http_response_code(406);
-        header("Content-type: text/json");
-        die('{"error":"request is malformed: url not provided"}');
-    }
-    
-    if (strpos($r,'socialclub.rockstargames.com/crew') === false) {
-        http_response_code(406);
-        header("Content-type: text/json");
-        die('{"error":"request is malformed: url not correct"}');
-    }
-    
-    $url = str_replace("Rockstar Games Social Club - Crew : ", "", _title($r));
-    if ($url == "" || $url == "Rockstar Games Social Club") {
-        http_response_code(444);
-        header("Content-type: text/json");
-        die('{"error":"crew does not exist"}');
-    } else {
-        header("Content-type: text/json");
-        echo '{"crew_name":"' . $url . '"}';
+    function unm($string, $ALLOWSPACE = false) {
+        if (!$ALLOWSPACE) {
+            $string = str_replace(' ', '_', $string);
+        }
+        
+        return preg_replace('/[^A-Za-z0-9_- ]/', '', $string);
     }
 ?>
