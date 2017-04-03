@@ -53,7 +53,7 @@
         $r_split = str_replace("socialclub.rockstargames.com/crew/", "", $r);
     }
     
-    $r_newstring = "https://socialclub.rockstargames.com/crew/" . clear(urlencode($r_split));
+    $r_newstring = "https://socialclub.rockstargames.com/crew/" . clear(properencode($r_split));
     
     $url = str_replace("Rockstar Games Social Club - Crew : ", "", _title($r_newstring));
     if ($url == "" || $url == "Rockstar Games Social Club") {
@@ -87,5 +87,11 @@
         }
         
         return preg_replace('/[^A-Za-z0-9_- ]/', '', $string);
+    }
+    
+    function properencode($str) {
+        $str = str_replace(' ', '%20', $string);
+        $str = str_replace('+', '%20', $string);
+        return $str;
     }
 ?>
