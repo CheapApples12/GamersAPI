@@ -25,6 +25,12 @@
     //  Downloaded from: https://github.com/CheapApples12/GamersAPI
     //----------------------------------------------------------------------------------//
     
+    if (!isset($_REQUEST["url"])) {
+        http_response_code(406);
+        header("Content-type: text/json");
+        die('{"error":"request is malformed: url not provided"}');
+    }
+    
     $r = urldecode($_REQUEST["url"]);
     
     if ($r == "") {
