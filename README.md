@@ -64,7 +64,7 @@ GamersAPI does not need composer, or any third-party software. The only requirem
  - PHP => 5.0
  - allow_url_fopen allowed
 
-If you do not want to download the api's, you are welcome to use our [Heroku hosted API's](#using-the-apis). If you choose to download the APIs, **you must not remove or change the copyright statement at the top of the .php files**
+If you do not want to download the api's, you are welcome to use our [Heroku hosted API's](#using-the-apis). If you choose to download the APIs, **you must not remove or change the copyright statement at the top of the .php files**.
 
 
 ## Additional APIs
