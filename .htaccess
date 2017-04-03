@@ -4,3 +4,5 @@ RewriteEngine on
 RewriteRule ^/apis/rsg/(.*)$ https://gamersapi.herokuapp.com/apis/rsg.php?url=$1 [NC,L,R=301]
 RewriteRule ^/apis/kik/(.*)$ https://gamersapi.herokuapp.com/apis/kik.php?username=$1 [NC,L,R=301]
 RewriteRule ^/apis/kik_https/(.*)$ https://gamersapi.herokuapp.com/apis/kik_https.php?username=$1 [NC,L,R=301]
+
+RewriteCond %{HTTP:X-Forwarded-Proto} !https 
