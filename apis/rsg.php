@@ -90,8 +90,8 @@
     }
     
     function properencode($str) {
-        $str = str_replace(' ', '%20', $string);
-        $str = str_replace('+', '%20', $string);
+        $str = str_replace(' ', '%20', $str);
+        $str = str_replace('+', '%20', $str);
         return $str;
     }
 ?>
