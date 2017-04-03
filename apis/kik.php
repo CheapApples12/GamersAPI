@@ -57,8 +57,34 @@
     }
     
     header("Content-type: text/json");
-    echo '{"username":"' . clear($kik_n_b[0]) . '", "display_name":"' . clear($kik_r_b[0]) . '", "avatar":"' . $kik_i . '", "avatar_ssl":"https://gamersapi.herokuapp.com/apis/kik_https/' . $r . '?cache=1"}';
+    $echoend = true;
+    
+    if (isset($_REQUEST["plaintext"])) {
+        if ($_REQUEST["plaintext"] == "username") {
+            echo clear($kik_n_b[0]);
+            $echoend = false;
+        }
         
+        if ($_REQUEST["plaintext"] == "displayname") {
+            echo clear($kik_r_b[0]);
+            $echoend = false;
+        }
+        
+        if ($_REQUEST["plaintext"] == "avatar") {
+            echo $kik_i;
+            $echoend = false;
+        }
+        
+        if ($_REQUEST["plaintext"] == "avatarssl") {
+            echo "https://gamersapi.herokuapp.com/apis/kik_https/' . $r . '?cache=1";
+            $echoend = false;
+        }
+    }
+    
+    if ($echoend) {
+        echo '{"username":"' . clear($kik_n_b[0]) . '", "display_name":"' . clear($kik_r_b[0]) . '", "avatar":"' . $kik_i . '", "avatar_ssl":"https://gamersapi.herokuapp.com/apis/kik_https/' . $r . '?cache=1"}';
+    }
+    
     function get_kik($username) {
         $html = file_get_contents_curl("https://kik.me/" . $username);
         
