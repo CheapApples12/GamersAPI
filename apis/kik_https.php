@@ -27,10 +27,10 @@
     //                                                                                   //
     //===================================================================================//
     
-    if (!isset($_REQUEST["url"])) {
+    if (!isset($_REQUEST["username"])) {
         http_response_code(406);
         header("Content-type: text/json");
-        die('{"error":"request is malformed: url not provided"}');
+        die('{"error":"request is malformed: username not provided"}');
     }
     
     $r = clear(unm(urldecode($_REQUEST["username"])));
