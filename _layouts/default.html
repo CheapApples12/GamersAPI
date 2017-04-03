@@ -55,7 +55,9 @@
         <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>{% if site.github.is_project_page %} <a class="btn" href="{{%20site.github.repository_url%20}}">View on GitHub</a> {% endif %} {% if site.show_downloads %} <a class="btn" href="{{%20site.github.zip_url%20}}">Download .zip</a> <a class="btn" href="{{%20site.github.tar_url%20}}">Download .tar.gz</a> {% endif %}
     </section>
     <section class="content_sep">
-        {% if site.github.is_project_page %} <a class="btn" href="https://github.com/CheapApples12/GamersAPI/" target="_blank">View on GitHub</a> {% endif %} {% if site.show_downloads %} <a class="btn" href="{{%20site.github.zip_url%20}}">Download .zip</a> <a class="btn" href="{{%20site.github.tar_url%20}}">Download .tar.gz</a> {% endif %}
+        <a class="btn" href="https://github.com/CheapApples12/GamersAPI/" target="_blank">View on GitHub</a>
+        <a class="btn" href="https://github.com/CheapApples12/GamersAPI/archive/master.zip">Download .zip</a>
+        <a class="btn" href="https://github.com/CheapApples12/GamersAPI/archive/master.tar.gz" target="_blank">Download .tar.gz</a>
     </section>
     <section class="main-content">
         {{ content }}
