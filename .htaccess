@@ -1,8 +1,8 @@
 # Not required for API operation.. it's just for directory aliasing on Apache configurations (make API endpoints prettier)
 
 RewriteEngine on
-RewriteRule ^/apis/rsg/(.*)$ https://gamersapi.herokuapp.com/apis/rsg.php?url=$1 [NC,L,R=301]
-RewriteRule ^/apis/kik/(.*)$ https://gamersapi.herokuapp.com/apis/kik.php?username=$1 [NC,L,R=301]
-RewriteRule ^/apis/kik_https/(.*)$ https://gamersapi.herokuapp.com/apis/kik_https.php?username=$1 [NC,L,R=301]
+RewriteRule ^/apis/rsg/(.*)$ ^/apis/rsg.php?url=$1 [NC,L,R=301]
+RewriteRule ^/apis/kik/(.*)$ ^/apis/kik.php?username=$1 [NC,L,R=301]
+RewriteRule ^/apis/kik_https/(.*)$ ^/apis/kik_https.php?username=$1 [NC,L,R=301]
 
 RewriteCond %{HTTP:X-Forwarded-Proto} !https 
