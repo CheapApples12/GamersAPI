@@ -37,6 +37,9 @@
     $kik_r_a = explode('<h1 class="display-name">', $kik_r);
     $kik_r_b = explode("</h1>" , $kik_r_a[1]);
     
+    $kik_n_a = explode('<h2 class="username">', $kik_r);
+    $kik_n_b = explode("</h2>" , $kik_n_a[1]);
+    
     $kik_i = get_kik($r);
     
     if ($kik_i == "") {
@@ -46,7 +49,7 @@
     }
     
     header("Content-type: text/json");
-    echo '{"username":"' . $r . '", "display_name":"' . clear($kik_r_b [0]) . '", "avatar":"' . $kik_i . '", "avatar_ssl":"https://gamersapi.herokuapp.com/apis/kik_https.php?username=' . $r . '"}';
+    echo '{"username":"' . clear($kik_n_b[0]) . '", "display_name":"' . clear($kik_r_b[0]) . '", "avatar":"' . $kik_i . '", "avatar_ssl":"https://gamersapi.herokuapp.com/apis/kik_https.php?username=' . $r . '"}';
         
     function get_kik($username) {
         $html = file_get_contents_curl("https://kik.me/" . $username);
