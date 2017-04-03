@@ -53,7 +53,7 @@
         $r_split = str_replace("socialclub.rockstargames.com/crew/", "", $r);
     }
     
-    $r_newstring = "https://socialclub.rockstargames.com/crew/" . clear($r_split);
+    $r_newstring = "https://socialclub.rockstargames.com/crew/" . clear(urlencode($r_split));
     
     $url = str_replace("Rockstar Games Social Club - Crew : ", "", _title($r_newstring));
     if ($url == "" || $url == "Rockstar Games Social Club") {
