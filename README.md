@@ -19,17 +19,17 @@ Our API allows you to get a user's display name, KiK avatar and a secure (https)
 
 The API can be accessed via:
 ```
-https://gamersapi.herokuapp.com/apis/kik.php?username={kik username}
+https://gamersapi.herokuapp.com/apis/kik/{kik username}
 ```
 
 Example Use:
 ```
-https://gamersapi.herokuapp.com/apis/kik.php?username=cheapapples12
+https://gamersapi.herokuapp.com/apis/kik/cheapapples12
 ```
 
 Example Response:
 ```json
-{"username":"cheapapples12", "display_name":"CheapApples12 [VP]", "avatar":"http://profilepics.kik.com/Fh8jwxDfbzVwNOSFTN67fDmPGn4/orig.jpg", "avatar_ssl":"https://gamersapi.herokuapp.com/apis/kik_https.php?username=cheapapples12"}
+{"username":"cheapapples12", "display_name":"CheapApples12 [VP]", "avatar":"http://profilepics.kik.com/Fh8jwxDfbzVwNOSFTN67fDmPGn4/orig.jpg", "avatar_ssl":"https://gamersapi.herokuapp.com/apis/kik_https/cheapapples12"}
 ```
 
 ---
@@ -43,12 +43,12 @@ At the moment, our API allows you to retrieve a crew name from a Socialclub URL.
 
 The API can be accessed via:
 ```
-https://gamersapi.herokuapp.com/apis/rsg.php?url={full socialclub url}
+https://gamersapi.herokuapp.com/apis/rsg/{full socialclub url}
 ```
 
 Example Use:
 ```
-https://gamersapi.herokuapp.com/apis/rsg.php?url=https://socialclub.rockstargames.com/crew/los_santos_police_xb
+https://gamersapi.herokuapp.com/apis/rsg/https://socialclub.rockstargames.com/crew/los_santos_police_xb
 ```
 
 Example Response:
