@@ -8,6 +8,8 @@ This section contains the API's, example uses and example responses. All respons
 
 [Rockstar Games Socialclub API](#rockstar-games-socialclub-crew-api)
 
+[PSN Avatar API](#psn-avatar-api)
+
 
 ---
 
@@ -55,6 +57,27 @@ Example Response:
 ```json
 {"crew_name":"Los Santos Police XB"}
 ```
+
+---
+
+#### PSN Avatar API
+Sony do not allow users to retrieve Playstation Avatars via any public API endpoint, so we made one for them. The PSN Avatar API is a JSON API.
+
+The API can be accessed via:
+```
+https://gamersapi.herokuapp.com/apis/psn/{psn id}
+```
+
+Example Use:
+```
+https://gamersapi.herokuapp.com/apis/psn/yowmudder
+```
+
+Example Response:
+```json
+{"avatar":"https://static-resource.np.community.playstation.net/avatar_m/WWS_A/A0002_m.png"}
+```
+
 
 ## Downloading the APIs
 GamersAPI is Open Source, which means you're free to use the API's, as long as you do not remove the attribution statements from the top of the API's, and as long as you don't attempt to market the API as your own, or attempt to charge money for people to use the API's.
