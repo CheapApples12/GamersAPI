@@ -45,7 +45,17 @@
     $src = $nodes->item(0)->getAttribute('src');
     
     header("Content-type: text/json");
-    echo "https:$src";
+    
+    if (isset($_REQUEST["plaintext"])) {
+        if ($_REQUEST["plaintext"] == "avatar") {
+            echo "https:" . $src;
+            $echoend = false;
+        }
+    }
+    
+    if ($echoend) {
+        echo '{"avatar":"https:' . $src . '"}';
+    }
     
     function clear($data) {
         $data = trim($data);
