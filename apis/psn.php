@@ -34,27 +34,33 @@
     }
     
     $r = clear(unm(urldecode($_REQUEST["username"])));
-    
-    $content = file_get_contents("https://my.playstation.com/" . $r);
-    
-    $doc = new DOMDocument();
-    libxml_use_internal_errors(true);
-    $doc->loadHTML($content);
-    $xpath = new DOMXPath($doc);
-    $nodes = $xpath->query("//img[@class='avatar']");
-    $src = $nodes->item(0)->getAttribute('src');
+    $psn = get_psn($r);
     
     header("Content-type: text/json");
+    $echoend = true;
     
     if (isset($_REQUEST["plaintext"])) {
         if ($_REQUEST["plaintext"] == "avatar") {
-            echo "https:" . $src;
+            echo $psn;
             $echoend = false;
         }
     }
     
     if ($echoend) {
-        echo '{"avatar":"https:' . $src . '"}';
+        echo '{"avatar":"' . $psn . '"}';
+    }
+    
+    function get_psn($username) {
+        $content = file_get_contents("https://my.playstation.com/" . $username);
+        
+        $doc = new DOMDocument();
+        libxml_use_internal_errors(true);
+        $doc->loadHTML($content);
+        $xpath = new DOMXPath($doc);
+        $nodes = $xpath->query('//img[@class="avatar"]');
+        $src = $nodes->item(0)->getAttribute("src");
+        
+        return "https:$src";
     }
     
     function clear($data) {
@@ -64,11 +70,8 @@
         return $data;
     }
     
-    function unm($string, $ALLOWSPACE = false) {
-        if (!$ALLOWSPACE) {
-            $string = str_replace(' ', '_', $string);
-        }
-        
-        return preg_replace('/[^A-Za-z0-9_- ]/', '', $string);
+    function unm($string) {
+        $string = str_replace(' ', '_', $string);
+        return preg_replace('/[^A-Za-z0-9_-]/', '', $string);
     }
 ?>
