@@ -72,7 +72,18 @@
         die('{"error":"crew does not exist"}');
     } else {
         header("Content-type: text/json");
-        echo '{"crew_name":"' . $url . '"}';
+        $echoend = true;
+        
+        if (isset($_REQUEST["plaintext"])) {
+            if ($_REQUEST["plaintext"] == "crewname") {
+                echo $url;
+                $echoend = false;
+            }
+        }
+        
+        if ($echoend) {
+            echo '{"crew_name":"' . $url . '"}';
+        }
     }
     
     function _title($url) {
