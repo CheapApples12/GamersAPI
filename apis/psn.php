@@ -33,7 +33,7 @@
         die('{"error":"request is malformed: psnid not provided"}');
     }
     
-    $r = clean(urldecode($_REQUEST["username"]));
+    $r = clear(unm(urldecode($_REQUEST["username"])));
     
     $content = file_get_contents("https://my.playstation.com/" . $r);
     
