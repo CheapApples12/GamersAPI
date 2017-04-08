@@ -60,7 +60,7 @@
         $nodes = $xpath->query('//img[@class="avatar"]');
         $src = $nodes->item(0)->getAttribute("src");
         
-        return "https:$src";
+        return "https:" . $src;
     }
     
     function clear($data) {
