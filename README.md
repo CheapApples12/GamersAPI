@@ -75,7 +75,7 @@ Example Use:
 
 Example Response:
 
-![View on Github.io](https://i.gyazo.com/5e9c07e28c989e5de676f82ce5299221.png "View on Github.io")
+[![View on Github.io][viewexample]](https://cheapapples12.github.io/GamersAPI/#rockstar-games-socialclub-button)
 
 <a href="https://socialclub.rockstargames.com/member/cheapapples12" class="rsg_btn" data-compare-lsgov="true">Add @CheapApples12</a><script async src="//gamersapi.herokuapp.com/rsg/script.js" charset="utf-8"></script>
 
@@ -115,3 +115,4 @@ If you do not want to download the api's, you are welcome to use our [Heroku hos
 If you have a project that requires information from a website or application that does not have an API, feel free to make a request, and I'll be sure to have a crack at it. Any API's I develop that can be considered game-related will be added here. If you want to suggest an API, [open a new issue](https://github.com/CheapApples12/GamersAPI/issues/new).
 
 [logo]: https://raw.githubusercontent.com/CheapApples12/GamersAPI/master/assets/images/header.png "GamersAPI Logo"
+[viewexample]: https://i.gyazo.com/5e9c07e28c989e5de676f82ce5299221.png "View Example on Github.io"
