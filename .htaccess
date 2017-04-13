@@ -5,6 +5,7 @@ RewriteRule ^apis/rsg/(.*)/?$ /apis/rsg\.php?url=$1 [QSA,L]
 RewriteRule ^apis/kik/(.*)/?$ /apis/kik\.php?username=$1 [QSA,L]
 RewriteRule ^apis/kik_https/(.*)/?$ /apis/kik_https\.php?username=$1 [QSA,L]
 RewriteRule ^apis/psn/(.*)/?$ /apis/psn\.php?username=$1 [QSA,L]
-RewriteRule /rsg/intent?username=(.*)$ /rsg/intent.php?username=$1 [L]
+RewriteRule ^intent?username=([^/]*)$ /rsg/intent?username=$1&compare_lsgov=true [L]
+RewriteRule ^intent?username=([^/]*)&compare_lsgov=([^/]*)$ /rsg/intent?username=$1&compare_lsgov=$2 [L]
 
 RewriteCond %{HTTP:X-Forwarded-Proto} !https 
