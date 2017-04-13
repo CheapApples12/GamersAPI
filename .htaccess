@@ -1,6 +1,6 @@
 # Not required for API operation.. it's just for directory aliasing on Apache configurations (make API endpoints prettier)
 
-Options +FollowSymLinks -MultiViews -Indexes
+
 DirectorySlash Off
 
 RewriteEngine on
