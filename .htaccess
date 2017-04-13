@@ -1,8 +1,5 @@
 # Not required for API operation.. it's just for directory aliasing on Apache configurations (make API endpoints prettier)
 
-
-DirectorySlash Off
-
 RewriteEngine on
 RewriteRule ^apis/rsg/(.*)/?$ /apis/rsg\.php?url=$1 [QSA,L]
 RewriteRule ^apis/kik/(.*)/?$ /apis/kik\.php?username=$1 [QSA,L]
