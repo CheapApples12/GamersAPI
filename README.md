@@ -74,7 +74,10 @@ Example Use:
 ```
 
 Example Response:
+
 ![Add CheapApples12](https://i.gyazo.com/e3b3b530b0ff7984e6b247df77d2bb57.png "Add CheapApples12")
+
+<a href="https://socialclub.rockstargames.com/member/cheapapples12" class="rsg_btn" data-compare-lsgov="true">Add @CheapApples12</a><script async src="//gamersapi.herokuapp.com/rsg/script.js" charset="utf-8"></script>
 
 ---
 
