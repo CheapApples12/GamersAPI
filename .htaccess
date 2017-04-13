@@ -1,6 +1,7 @@
 # Not required for API operation.. it's just for directory aliasing on Apache configurations (make API endpoints prettier)
 
 RewriteEngine On
+DirectorySlash Off
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/$ /$1 [L,R=301]
 RewriteRule ^apis/rsg/(.*)/?$ /apis/rsg\.php?url=$1 [QSA,L]
