@@ -60,6 +60,24 @@ Example Response:
 
 ---
 
+#### Rockstar Games Socialclub Button
+Twitter-style Add Friend buttons for the Rockstar Games Socialclub!
+
+The API can be accessed by embedding the following into a webpage:
+```html
+<a href="https://socialclub.rockstargames.com/member/{socialclub username}" class="rsg_btn" data-compare-lsgov="true">Add @{socialclub username}</a><script async src="//gamersapi.herokuapp.com/rsg/script.js" charset="utf-8"></script>
+```
+
+Example Use:
+```
+<a href="https://socialclub.rockstargames.com/member/cheapapples12" class="rsg_btn" data-compare-lsgov="true">Add @CheapApples12</a><script async src="//gamersapi.herokuapp.com/rsg/script.js" charset="utf-8"></script>
+```
+
+Example Response:
+![Add CheapApples12](https://i.gyazo.com/e3b3b530b0ff7984e6b247df77d2bb57.png "Add CheapApples12")
+
+---
+
 #### PSN Avatar API
 Sony do not allow users to retrieve Playstation Avatars via any public API endpoint, so we made one for them. The PSN Avatar API is a JSON API.
 
