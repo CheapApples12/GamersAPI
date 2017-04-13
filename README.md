@@ -8,6 +8,8 @@ This section contains the API's, example uses and example responses. All respons
 
 [Rockstar Games Socialclub API](#rockstar-games-socialclub-crew-api)
 
+[Rockstar Games Socialclub Button](#rockstar-games-socialclub-button)
+
 [PSN Avatar API](#psn-avatar-api)
 
 
