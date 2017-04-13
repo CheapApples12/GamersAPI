@@ -94,3 +94,7 @@
     overflow: hidden;
     position: relative;
 }
+
+.highlighter-rouge ~ p>img {
+    display: none;
+}
