@@ -72,7 +72,7 @@ The API can be accessed by embedding the following into a webpage:
 
 Example Use:
 ```
-<a href="https://socialclub.rockstargames.com/member/cheapapples12" class="rsg_btn" data-compare-lsgov="true">Add @CheapApples12</a><script async src="//gamersapi.herokuapp.com/rsg/script.js" charset="utf-8"></script>
+<a href="https://socialclub.rockstargames.com/member/priceybanana16" class="rsg_btn" data-compare-lsgov="true">Add @PriceyBanana16</a><script async src="//gamersapi.herokuapp.com/rsg/script.js" charset="utf-8"></script>
 ```
 
 Example Response:
