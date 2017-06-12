@@ -48,12 +48,12 @@
             if ($_REQUEST["cache"] == "1") {
                 $lm = get_headers($i, 3);
                 session_cache_limiter("none");
-                header("Cache-control: max-age=" . strtotime("+2 days", time()), true);
-                header("Cache-Control: public, max-age=86400", false);
-                header("Date: " . gmdate("D, d M Y H:i:s \G\M\T"), true);
-                header("Expires: " . gmdate("D, d M Y H:i:s \G\M\T", strtotime("+1 month"));
-                header("Pragma: no-cache", true);
-                header("Last-modified: " . $lm[3]);
+                //header("Cache-control: max-age=" . strtotime("+2 days", time()), true);
+                //header("Cache-Control: public, max-age=86400", false);
+                //header("Date: " . gmdate("D, d M Y H:i:s \G\M\T"), true);
+                //header("Expires: " . gmdate("D, d M Y H:i:s \G\M\T", strtotime("+1 month"));
+                //header("Pragma: no-cache", true);
+                //header("Last-modified: " . $lm[3]);
             } else {
                 header("Expires: 0");
                 header("Pragma: no-cache");
