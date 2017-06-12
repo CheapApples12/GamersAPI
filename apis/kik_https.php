@@ -49,7 +49,10 @@
                 $lm = get_headers($i, 3);
                 session_cache_limiter("none");
                 header("Cache-control: max-age=" . strtotime("+2 days", time()));
-                header("Expires: " . gmdate("M d Y H:i:s", strtotime("+2 days", time())));
+                header("Date: " . gmdate("D, d M Y H:i:s") . " GMT", true);
+                header("Expires: on, " . gmdate("D, d M Y H:i:s", strtotime("+1 month")) . " GMT", true);
+                header("Cache-Control: public, max-age=86400", false);
+                header("Pragma: no-cache", true);
                 header("Last-modified: " . $lm[3]);
             } else {
                 header("Expires: 0");
