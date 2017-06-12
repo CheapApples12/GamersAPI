@@ -48,14 +48,17 @@
             if ($_REQUEST["cache"] == "1") {
                 $lm = get_headers($i, 3);
                 session_cache_limiter("none");
-                //header("Cache-control: max-age=" . strtotime("+2 days", time()), true);
-                //header("Cache-Control: public, max-age=86400", false);
-                //header("Date: " . gmdate("D, d M Y H:i:s \G\M\T"), true);
-                //header("Expires: " . gmdate("D, d M Y H:i:s \G\M\T", strtotime("+1 month"));
-                //header("Pragma: no-cache", true);
-                //header("Last-modified: " . $lm[3]);
+                header("Cache-control: max-age=" . strtotime("+1 month", time()), true);
+                header("Cache-Control: public, max-age=86400", false);
+                header("Date: " . gmdate("D, d M Y H:i:s \G\M\T"), true);
+                header("Expires: " . gmdate("D, d M Y H:i:s \G\M\T", strtotime("+1 month", time())));
+                header("Pragma: no-cache", true);
+                header("Last-modified: " . $lm[3]);
             } else {
-                header("Expires: 0");
+                header("Expires: 01 Jan 1970 00:00:00 GMT");
+                header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+                header("Cache-Control: post-check=0, pre-check=0", false);
+                header("Last-Modified: " . gmdate("D, d M Y H:i:s \G\M\T"));
                 header("Pragma: no-cache");
             }
         } else {
